@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-reaction
+      author: Georgee
+      changes:
+        - createTable:
+            tableName: reaction
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(200)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: link
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: source
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(200)
+                  constraints:
+                    nullable: false

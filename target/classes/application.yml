@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/changeset/create-reaction-table.yaml
+    enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/reactions_db
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 1234
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+
+
